@@ -8,8 +8,9 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest){
-    const valid: boolean = (process.env.AUTH_KEY === req.headers.get("auth"));
-    // const valid: boolean = (req.headers.get("auth") === "akucintaTST");
+    // const valid: boolean = (process.env.AUTH_KEY === req.headers.get("auth"));
+    console.log(process.env.AUTH_KEY)
+    const valid: boolean = (req.headers.get("auth") === "akucintaTST");
     const responseStatus: number = valid ? 200 : 401;
     const message: string = valid ? "API Berhasil dipanggil!" : "Autentikasi gagal (auth : akucintaTST)";
 
