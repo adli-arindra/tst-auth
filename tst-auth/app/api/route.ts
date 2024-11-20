@@ -1,5 +1,5 @@
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export async function GET() {
     return NextResponse.json({
@@ -7,8 +7,9 @@ export async function GET() {
     })
 }
 
-export async function POST(){
+export async function POST(req: NextRequest){
     return NextResponse.json({
-        "msg": "ini API nya make GET"
+        "msg": "ini API nya make POST",
+        "req": req.headers
     })
 }
