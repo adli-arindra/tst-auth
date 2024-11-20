@@ -1,5 +1,5 @@
-
 import { NextRequest, NextResponse } from "next/server";
+require('dotenv').config()
 
 export async function GET() {
     return NextResponse.json({
@@ -8,8 +8,11 @@ export async function GET() {
 }
 
 export async function POST(req: NextRequest){
-    return NextResponse.json({
-        "msg": "ini API nya make POST",
-        "req": req.headers
-    })
+    const valid: boolean = (process.env.AUTH_KEY === req.headers.get("auth"));
+    // const valid: boolean = (req.headers.get("auth") === "akucintaTST");
+    const responseStatus: number = valid ? 200 : 401;
+    const message: string = valid ? "API Berhasil dipanggil!" : "Autentikasi gagal (auth : akucintaTST)";
+
+
+    return NextResponse.json({error: message }, { status: responseStatus });
 }
