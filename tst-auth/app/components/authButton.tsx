@@ -22,7 +22,7 @@ export default function AuthButton() {
                     <ul tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         <li><Link href="/profile">Profile</Link></li>
-                        <li><p>Settings</p></li>
+                        <li><Link href="/documentation">Documentation</Link></li>
                         <li><button onClick={()=> signOut()}>Sign Out</button></li>
                     </ul>
                 </div>
