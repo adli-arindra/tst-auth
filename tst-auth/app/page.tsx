@@ -1,12 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
 
   return (
   <div className="hero bg-base-200 min-h-screen">
     <div className="hero-content flex-col lg:flex-row-reverse">
-      <img
+      <Image
+        width={256}
+        height={256}
         src="/logo-with-name.png"
+        alt=""
         className="max-w-sm rounded-lg shadow-2xl ml-10" />
       <div>
         <h1 className="text-5xl font-bold">Get started with <br/>Lautan API!</h1>

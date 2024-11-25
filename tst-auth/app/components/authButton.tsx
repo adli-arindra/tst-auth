@@ -8,7 +8,7 @@ const defaultPath = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkG
 
 
 export default function AuthButton() {
-    const { user, setUser } = useUserContext();
+    const { user } = useUserContext();
 
     return (
         <div>
