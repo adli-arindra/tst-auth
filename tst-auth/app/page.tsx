@@ -15,7 +15,7 @@ export default function Home() {
       <div>
         <h1 className="text-5xl font-bold">Get started with <br/>Lautan API!</h1>
         <p className="py-6">
-          API paling keren sejagad raya<br/>
+          API paling keren sejagad raya.<br/>
           kabarnya semua full-stack developer KETAR-KETIR<br/>
           melihat ini!
         </p>
